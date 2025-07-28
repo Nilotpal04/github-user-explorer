@@ -15,6 +15,10 @@ function fetchData() {
     alert("Please enter an username!");
     return;
   }
+
+  document.querySelector("#loading").style.display = "block";
+  document.querySelector("#usercard").style.display = "none";
+  
   const url = `https://api.github.com/users/${user}`;
 
   fetch(url)
